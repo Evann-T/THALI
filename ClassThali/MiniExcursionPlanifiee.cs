@@ -50,6 +50,11 @@ namespace ClassThali
             return this.nombreInscrits;
         }
 
+        public MiniExcursion GetLaMiniExcursion()
+        {
+            return this.laMiniExcursion;
+        }
+
         /// <summary>
         /// Retourne un booleen qui indique si la mini-excursion planifiee est complete ou non
         /// </summary>

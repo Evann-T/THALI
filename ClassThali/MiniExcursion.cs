@@ -13,6 +13,7 @@ namespace ClassThali
         private string libelle;
         private int nombrePlaces;
         private List<Etape> lesEtapes;  // contient les étapes constituant la mini-excursion 
+        private double montantParticipation;
 
 
         /// <summary>
@@ -21,12 +22,13 @@ namespace ClassThali
         /// <param name="unNumero">numero de la mini-excursion</param>
         /// <param name="unLibelle">libelle de la mini-excursion</param>
         /// <param name="unNombre">nombre de places maxi de la mini-excursion</param>
-        public MiniExcursion(int unNumero, string unLibelle, int unNombre)
+        public MiniExcursion(int unNumero, string unLibelle, int unNombre, double unMontant)
         {
             this.numero = unNumero;
             this.libelle = unLibelle;
             this.nombrePlaces = unNombre;
             this.lesEtapes = new List<Etape>();
+            this.montantParticipation = unMontant;
 	    }
             
 
@@ -37,6 +39,11 @@ namespace ClassThali
         public int GetNombrePlaces()
         {
             return this.nombrePlaces;
+        }
+
+        public double GetMontantParticipation()
+        {
+            return this.montantParticipation;
         }
 
         /// <summary>

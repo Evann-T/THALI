@@ -21,15 +21,19 @@ namespace ClassThali
             this.lesMiniExcursionsPlanifiees = new List<MiniExcursionPlanifiee>();
         }
 
-   //     public double CalculerRecetteJour()
-    //    {
-    //        double recetteJour = 0;
-    //        foreach (MiniExcursionPlanifiee miniExcursionPlanifiee in this.lesMiniExcursionsPlanifiees)
-    //        {
-    //            miniExcursionPlanifiee
-    //            recetteJour += 
-    //        }
-    //    return recetteJour;
-   //     }
+        public void SetLesMEP(MiniExcursionPlanifiee uneMiniExcursionPlanifiees)
+        {
+            this.lesMiniExcursionsPlanifiees.Add(uneMiniExcursionPlanifiees);
+        }
+
+        public double CalculerRecetteJour()
+        {
+            double recetteJour = 0;
+            foreach (MiniExcursionPlanifiee mep in this.lesMiniExcursionsPlanifiees)
+            {
+                recetteJour += mep.GetNombreInscrits() * mep.GetLaMiniExcursion().GetMontantParticipation();
+            }
+        return recetteJour;
+        }
     }
 }
