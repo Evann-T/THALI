@@ -20,5 +20,16 @@ namespace ClassThali
             this.date = uneDate;
             this.lesMiniExcursionsPlanifiees = new List<MiniExcursionPlanifiee>();
         }
+
+   //     public double CalculerRecetteJour()
+    //    {
+    //        double recetteJour = 0;
+    //        foreach (MiniExcursionPlanifiee miniExcursionPlanifiee in this.lesMiniExcursionsPlanifiees)
+    //        {
+    //            miniExcursionPlanifiee
+    //            recetteJour += 
+    //        }
+    //    return recetteJour;
+   //     }
     }
 }
